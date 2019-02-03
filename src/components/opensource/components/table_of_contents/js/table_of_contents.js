@@ -18,7 +18,7 @@ export default {
 
             // Just create links to any repos
             for (var i = 0; i < this.names.length; i++) {
-                this.TOC += '<a href="#' + this.names[i] + '">' + this.names[i] + "</a>&nbsp;-&nbsp;";
+                this.TOC += '<a href="#' + this.names[i] + '">' + this.names[i] + "</a> - ";
             }
 
             if (this.TOC !== '') {

@@ -29,10 +29,8 @@ export default {
         getIndexEntry() {
             // Get the first letter of the name ('B' if name is 'Base64')
             var sFirst = this.repo.name.substr(0, 1);
-            console.log(this.repo.name + '***' + sFirst + '-----lastIndex=@' + this.lastIndex + '@');
             // Check if the last processed letter wasn't that name
             if (sFirst !== this.lastIndex) {
-                console.log('Remember ' + sFirst);
                 // If no, remember the name and return the letter
                 this.lastIndex = sFirst;
                 return this.lastIndex;

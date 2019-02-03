@@ -4,9 +4,11 @@
 
     <div class="ui-group">
         <div class="button-group filter-button-group">
-            <button v-for="(filter, index) in filters" :key="index" class="button" :data-filter="filter" v-text="filter" />
+            <button v-for="(filter, index) in filters" :key="index" class="button" :data-filter="filter" @click="filterRepo($event)"
+                v-text="filter" :value="filter" />
         </div>
     </div>
+
     <hr class="m-0">
 
 </div>

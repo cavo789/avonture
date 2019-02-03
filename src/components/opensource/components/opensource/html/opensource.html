@@ -28,10 +28,10 @@
             <table_of_contents :names="names" />
 
             <!-- Show buttons for filtering based on repo's languages (javascript, css, ...) -->
-            <filters :repos="repos" />
+            <!--<filters :repos="repos" />-->
 
             <!-- Display the list of repositories, one card by repo -->
-            <div>
+            <div class="cards">
                 <card v-for="(repo, index) in repos" :key="index" :repo="repo" :index="index" />
             </div>
 

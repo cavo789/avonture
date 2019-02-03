@@ -1,4 +1,4 @@
-![Banner](img/banner.jpg)
+![Banner](src/assets/banner.jpg)
 
 # avonture.be
 

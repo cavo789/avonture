@@ -5,18 +5,46 @@
 function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
 }
+/*
+var Isotope = require('isotope-layout');
 
+var cards = document.querySelector('.cards');
+
+var iso = new Isotope(cards, {
+    itemSelector: ".grid-item",
+    layoutMode: "fitRows"
+});
+*/
 export default {
     name: "filters",
     data() {
         return {
-            filters: []
+            filters: [],
+            option: {
+                getSortData: {
+                    id: "id"
+                },
+                sortBy: "id"
+            }
         }
     },
     props: {
         repos: {
             type: Array,
             required: true
+        }
+    },
+    methods: {
+        filterRepo(e) {
+            // e.target.value will return the value of the button
+            // i.e. the value to use for filtering (like "PHP", "Javascript", ...)
+            var filterValue = e.target.value;
+
+            alert(filterValue);
+            //var filterValue = $(this).attr("data-filter");
+
+            // And filter on that value
+            //iso.filter('PHP');
         }
     },
     mounted() {
