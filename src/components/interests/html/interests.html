@@ -1,0 +1,33 @@
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+
+    <div class="my-auto">
+        <h2 class="mb-5">Interests</h2>
+        <p v-html="interests.intro" />
+        <blockquote v-html="interests.quote" />
+    </div>
+
+    <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+
+    <ul class="list-inline dev-icons">
+        <li class="list-inline-item" v-for="(language, index) in interests.languages" :key="index">
+            <i :class="language.icon" :title="language.title"></i>
+        </li>
+    </ul>
+
+    <div class="subheading mb-3">And much more like</div>
+
+    <ul class="list-inline dev-icons">
+        <li class="list-inline-item" v-for="(language, index) in interests.andmore" :key="index">
+            <i :class="language.icon" :title="language.title"></i>
+        </li>
+    </ul>
+
+    <div class="subheading mb-3">And, of course, certainly not</div>
+
+    <ul class="list-inline dev-icons">
+        <li class="list-inline-item" v-for="(language, index) in interests.hate" :key="index">
+            <i :class="language.icon" :title="language.title"></i>
+        </li>
+    </ul>
+
+</section>

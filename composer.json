@@ -1,0 +1,24 @@
+{
+  "name": "avonture/homepage",
+  "description": "Source for the avonture.be website",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christophe Avonture",
+      "email": "christophe@avonture.be"
+    }
+  ],
+  "homepage": "https://github.com/cavo789/avonture",
+  "type": "homepage",
+  "keywords": [
+    "php",
+    "open source",
+    "homepage"
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "knplabs/github-api": "^2.10",
+    "php-http/guzzle6-adapter": "^1.1",
+    "phpFastCache/phpFastCache": "^7.0"
+  }
+}

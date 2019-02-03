@@ -1,0 +1,43 @@
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="opensource">
+
+    <div class="my-auto">
+
+        <h2 class="mb-5">Open Source repositories</h2>
+
+        <div>
+            You can retrieve all my Open Source software on my
+            <a :href="github" title="My profile on GitHub">
+                <i class="fab fa-github"></i> GitHub profile
+            </a>.
+            Short description of them here below. Click on a button below to filter repositories to match a
+            specific language.
+        </div>
+
+        <br />
+
+        <div v-if="loading">
+            <strong><em>Please wait, loading the list from GitHub</em></strong>
+        </div>
+
+        <div v-else>
+
+            <!-- Show an index table i.e. the first letter of repo's name for quick navigation -->
+            <table_of_index :names="names" />
+
+            <!-- Show a content table i.e. all repo's names -->
+            <table_of_contents :names="names" />
+
+            <!-- Show buttons for filtering based on repo's languages (javascript, css, ...) -->
+            <filters :repos="repos" />
+
+            <!-- Display the list of repositories, one card by repo -->
+            <div>
+                <card v-for="(repo, index) in repos" :key="index" :repo="repo" :index="index" />
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="m-0">
+
+</section>

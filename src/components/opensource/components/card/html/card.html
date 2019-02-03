@@ -1,0 +1,47 @@
+<div :class="repo.language">
+    <div v-if="repo.private='false'" class="resume-item d-flex flex-column flex-md-row mb-5 ">
+        <div class="resume-content mr-auto">
+
+            <!--<a v-if="getIndexEntry()" :id="lastIndex" />-->
+            <h1 v-if="getIndexEntry()" v-text="lastIndex" />
+
+            <h4 :id="repo.name" class="mb-0" v-html="getRepoTitle()" />
+
+            <!--
+            <div v-if="repo.archived='true'" class="icon archived">
+                This repository has been archived. {{ repo.archived }}
+            </div>
+            -->
+
+            <div class="mb-3" v-text="repo.description"></div>
+
+            <div v-if="repo.has_wiki" class="icon wiki">
+                <a :href="getWikiUrl()" rel="noopener noindex nofollow">
+                    {{ getWikiUrl() }}
+                </a>
+            </div>
+
+            <div class="icon github">
+                <a :href="repo.html_url" rel="noopener nofollow">
+                    Get this program on GitHub
+                </a>
+            </div>
+
+            <div v-if="repo.homepage" class="icon homepage">
+                <a :href="repo.homepage" v-text="repo.homepage" />
+            </div>
+
+            <div v-if="repo.stargazers_count>0" class="icon stars" v-text="repo.stargazers_count" />
+
+            <div v-if="repo.license!=null" class="icon license">
+                <a :href="getLicenseUrl()" rel="noopener noindex nofollow" v-text="repo.license.name" />
+            </div>
+
+        </div>
+
+        <div class="resume-date text-md-right">
+            <span class="text-primary" v-text="repo.language" />
+        </div>
+
+    </div>
+</div>
