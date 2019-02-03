@@ -22,8 +22,10 @@ export default {
             }
 
             if (this.TOC !== '') {
-                // Remove the last occurence of "&nbsp;-&nbsp;"
-                this.TOC = this.TOC.slice(0, -13);
+                // Remove the last occurence of " - "
+                if (this.TOC.slice(-3) == ' - ') {
+                    this.TOC = this.TOC.slice(0, -3);
+                }
             }
 
             return this.TOC;
