@@ -12,17 +12,9 @@ Optional parameters on the querystring
 
 - `?clear=1` to force to clear the cache and get the latest version of information's on GitHub
 
-## Libraries used
-
-Also see the composer.json file if you need more infos.
-
-- [phpFastCache/phpFastCache](https://github.com/PHPSocialNetwork/phpfastcache); A high-performance backend cache system.
-- [knplabs/github-api](https://github.com/KnpLabs/php-github-api); A simple PHP GitHub API client, Object Oriented, tested and documented. For 5.5+.
-- [php-http/guzzle6-adapter](https://github.com/php-http/guzzle6-adapter); Guzzle 6 HTTP adapter.
-
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 

@@ -1,6 +1,6 @@
 {
   "name": "avonture/homepage",
-  "description": "Source for the avonture.be website",
+  "description": "Source for the https://www.avonture.be website",
   "license": "MIT",
   "authors": [
     {
@@ -16,9 +16,6 @@
     "homepage"
   ],
   "require": {
-    "php": ">=7.1.0",
-    "knplabs/github-api": "^2.10",
-    "php-http/guzzle6-adapter": "^1.1",
-    "phpFastCache/phpFastCache": "^7.0"
+    "php": ">=7.1.0"
   }
 }
