@@ -7,26 +7,23 @@
     </div>
 
     <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-
     <ul class="list-inline dev-icons">
         <li class="list-inline-item" v-for="(language, index) in interests.languages" :key="index">
-            <i :class="language.icon" :title="language.title"></i>
+            <font-awesome-icon class="icon" :icon="getIcon(language.icon)" :title="language.title" />
         </li>
     </ul>
 
     <div class="subheading mb-3">And much more like</div>
-
     <ul class="list-inline dev-icons">
-        <li class="list-inline-item" v-for="(language, index) in interests.andmore" :key="index">
-            <i :class="language.icon" :title="language.title"></i>
+        <li class="list-inline-item" v-for="(more, index) in interests.andmore" :key="index">
+            <font-awesome-icon class="icon" :icon="getIcon(more.icon)" :title="more.title" />
         </li>
     </ul>
 
     <div class="subheading mb-3">And, of course, certainly not</div>
-
     <ul class="list-inline dev-icons">
-        <li class="list-inline-item" v-for="(language, index) in interests.hate" :key="index">
-            <i :class="language.icon" :title="language.title"></i>
+        <li class="list-inline-item" v-for="(hate, index) in interests.hate" :key="index">
+          <font-awesome-icon class="icon" :icon="getIcon(hate.icon)" :title="hate.title" />
         </li>
     </ul>
 

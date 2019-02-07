@@ -3,3 +3,6 @@
 /vendor/
 .DS_Store
 *.log
+composer.lock
+package-lock.json
+package-lock.json

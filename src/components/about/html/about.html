@@ -16,7 +16,7 @@
 
             <div class="social-icons">
                 <a v-for="(social, index) in socials" :href="social.url" :title="social.title" :key="index">
-                    <i :class="social.icon"></i>
+                    <font-awesome-icon :icon="getIcon(social.icon)" />
                 </a>
             </div>
 
