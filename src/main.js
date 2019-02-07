@@ -18,7 +18,7 @@ new Vue({
         },
         opensource: {
           url: "https://api.github.com/users/cavo789/repos",
-          per_page: 2
+          per_page: 200
         },
         page_title:
           "Christophe Avonture aka cavo789 | My Open Source softwares",
@@ -27,7 +27,7 @@ new Vue({
           intro:
             "I really love to code and love to refactor my code again and again.",
           quote:
-            "Vingt fois sur le métier remettez votre ouvrage,<br/>Polissez- le sans cesse, et le repolissez<br>Ajoutez quelquefois, et souvent effacez<br><small>— Nicolas Boileau(1636, 1711) in<cite>L'Art poétique</cite>.</small>",
+            "Vingt fois sur le métier remettez votre ouvrage,<br/>Polissez- le sans cesse, et le repolissez<br>Ajoutez quelquefois, et souvent effacez<br><small>— Nicolas Boileau (1636, 1711) in <cite>L'Art poétique</cite>.</small>",
           languages: [
             {
               icon: { prefix: "fab", name: "markdown" },
