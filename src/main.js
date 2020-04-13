@@ -114,7 +114,7 @@ new Vue({
                 prefix: "fab",
                 name: "internet-explorer"
               },
-              title: "The most afwul thing to use for surfing on the Internet"
+              title: "The most awful thing to use for surfing on the Internet"
             }
           ]
         },

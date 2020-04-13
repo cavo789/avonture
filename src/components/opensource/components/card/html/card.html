@@ -1,56 +1,60 @@
 <div :class="repo.language" class="grid-item">
-    <div v-if="repo.private='false'" class="resume-item d-flex flex-column flex-md-row mb-5 ">
-        <div class="resume-content mr-auto">
+  <div v-if="repo.private='false'"
+    class="resume-item d-flex flex-column flex-md-row mb-5 ">
+    <div class="resume-content mr-auto">
 
-            <!--<a v-if="getIndexEntry()" :id="lastIndex" />-->
-            <h1 v-if="getIndexEntry()" v-text="lastIndex" />
+      <!--<a v-if="getIndexEntry()" :id="lastIndex" />-->
+      <h1 v-if="getIndexEntry()" v-text="lastIndex" />
 
-            <h4 :id="repo.name" class="mb-0" v-html="getRepoTitle()" />
+      <h4 :id="repo.name" class="mb-0" v-html="getRepoTitle()" />
 
-            <!--
+      <!--
             <div v-if="repo.archived='true'" class="icon archived">
                 This repository has been archived. {{ repo.archived }}
             </div>
             -->
 
-            <div class="mb-3" v-text="repo.description"></div>
+      <div class="mb-3" v-html="getRepoDescription()"></div>
 
-            <div v-if="repo.has_wiki">
-                <font-awesome-icon class="icon" :icon="['fas', 'book']" />
-                <a :href="getWikiUrl()" rel="noopener noindex nofollow">
-                    {{ getWikiUrl() }}
-                </a>
-            </div>
+      <div v-if="repo.has_wiki">
+        <font-awesome-icon class="icon" :icon="['fas', 'book']" />
+        <a :href="getWikiUrl()" rel="noopener noindex nofollow">
+          {{ getWikiUrl() }}
+        </a>
+      </div>
 
-            <div>
-                <font-awesome-icon class="icon" :icon="['fab', 'github']" />
-                <a :href="repo.html_url" rel="noopener nofollow">
-                    Get this program on GitHub
-                </a>
-            </div>
+      <div>
+        <font-awesome-icon class="icon" :icon="['fab', 'github']" />
+        <a :href="repo.html_url" rel="noopener nofollow">
+          Get this program on GitHub
+        </a>
+      </div>
 
-            <div v-if="repo.homepage">
-                <font-awesome-icon  class="icon":icon="['fas', 'tv']" />
-                <a :href="repo.homepage" v-text="repo.homepage" />
-            </div>
+      <div v-if="repo.homepage">
+        <font-awesome-icon class="icon" :icon="['fas', 'tv']" />
+        <a :href="repo.homepage" v-text="repo.homepage" />
+      </div>
 
-            <div v-if="repo.stargazers_count>0">
-              <font-awesome-icon  class="icon" :icon="['fas', 'star']" />
-              <span v-text="repo.stargazers_count" />
-            </div>
+      <div v-if="repo.stargazers_count>0">
+        <font-awesome-icon class="icon" :icon="['fas', 'star']" />
+        <span v-text="repo.stargazers_count" />
+      </div>
 
-            <div v-if="repo.license!=null">
-                <font-awesome-icon class="icon" :icon="['fas', 'book']" />
-                <a :href="getLicenseUrl()" rel="noopener noindex nofollow" v-text="repo.license.name" />
-            </div>
+      <div v-if="repo.license!=null">
+        <font-awesome-icon class="icon" :icon="['fas', 'book']" />
+        <a :href="getLicenseUrl()" rel="noopener noindex nofollow"
+          v-text="repo.license.name" />
+      </div>
 
-            <small><a href="#index" title="Back to index"><i class="fas fa-arrow-up">&nbsp;Back to index</i></a></small>
-
-        </div>
-
-        <div class="resume-date text-md-right">
-            <span class="text-primary" v-text="repo.language" />
-        </div>
+      <small><a href="#index" title="Back to index"><i
+            class="fas fa-arrow-up">&nbsp;Back to
+            index</i></a></small>
 
     </div>
+
+    <div class="resume-date text-md-right">
+      <span class="text-primary" v-text="repo.language" />
+    </div>
+
+  </div>
 </div>

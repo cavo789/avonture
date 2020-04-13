@@ -56,6 +56,20 @@ export default {
       }
       // That letter was already processed, return false
       return false;
+    },
+    getRepoDescription() {
+
+      // Add a small "Archived" info in case of
+      var archived = '';
+      if (this.repo.archived) {
+        archived = "&nbsp;&nbsp;<mark>Archived</mark>";
+      }
+
+      // Get the description and replace "**WORD**" by "<mark>WORD</mark>"
+      var re = /([^*]*)\*{2}([^*]*)\*{2}([^*]*)/;
+      var sDescription = this.repo.description;
+      var result = sDescription.replace(re, '$1 <mark>$2</mark> $3');
+      return result + archived;
     }
   }
 };
