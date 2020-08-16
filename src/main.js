@@ -18,7 +18,7 @@ new Vue({
         },
         opensource: {
           url: "https://api.github.com/users/cavo789/repos",
-          per_page: 200
+          per_page: 100
         },
         page_title:
           "Christophe Avonture aka cavo789 | My Open Source softwares",
