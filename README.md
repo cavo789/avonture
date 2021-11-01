@@ -1,6 +1,6 @@
-![Banner](src/assets/banner.jpg)
-
 # avonture.be
+
+![Banner](./banner.svg)
 
 > My homepage website (https://www.avonture.be)
 
